@@ -1,0 +1,52 @@
+.site-header {
+    background-color: #a17a74; /* Пример цвета фона */
+    color: #f0f8ff; /* Цвет текста */
+    padding: 20px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+/* Контейнер для логотипа и названия */
+.site-header .logo {
+    display: flex; /* Для горизонтального расположения логотипа и названия */
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: center; /* Выравнивание по горизонтали */
+}
+
+/* Стили для картинки логотипа */
+.site-header .logo img {
+    width: 50px; /* Задайте желаемый размер логотипа */
+    margin-right: 10px; /* Отступ справа от логотипа */
+}
+
+/* Стили для названия сайта */
+.site-header .logo h1 {
+    font-size: 2em; /* Размер шрифта */
+    margin: 0; /* Убираем отступы */
+}
+
+/* Стили для навигации */
+.site-header nav ul {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Располагаем пункты меню горизонтально */
+    justify-content: center; /* Выравниваем пункты меню по центру */
+}
+
+/* Стили для пунктов меню */
+.site-header nav li {
+    margin: 0 15px; /* Отступы между пунктами меню */
+}
+
+/* Стили для ссылок в меню */
+.site-header nav a {
+    color: #f0f8ff; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-weight: bold; /* Делаем текст жирным */
+}
+
+/* Стили для ссылок при наведении */
+.site-header nav a:hover {
+    text-decoration: underline; /* Подчеркиваем при наведении */
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <style>
+main {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+button {
+    font-size: 0.8em;
+
+}
+.white-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.cont {
+    text-align: center;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #8d7373;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+}
+
+.account-name {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.account-info {
+    font-family: Century Gothic, serif;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.account-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+
+    
+}
+
+.account-link {
+    background-color: #8d7373;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    min-width: 120px;
+    border: none;
+    cursor: pointer;
+    font-family: Century Gothic, serif;
+
+}
+
+.leaf-left, .leaf-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: auto;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.leaf-left {
+    left: 5%;
+}
+
+.leaf-right {
+    right: 5%;
+    transform: translateY(-50%) scaleX(-1);
+}
+
+/* Скрываем элементы с данными аккаунта по умолчанию */
+.account-name,
+.account-info {
+    display: none;
+}
+
+/* Скрываем ссылки "Избранное" и "Корзина" по умолчанию */
+#auth-dependant .favorite,
+#auth-dependant .cart {
+    display: none;
+}
+
+/* Показываем элементы и ссылки, когда пользователь аутентифицирован */
+.authenticated .account-name,
+.authenticated .account-info,
+.authenticated #auth-dependant .favorite,
+.authenticated #auth-dependant .cart {
+    display: block;
+}
+
+
+    </style>
+      <link rel="stylesheet" href="нигга.css">
+    </head>
+    
+</head>
+
+<body>
+    <script src="ЛК.js"></script>
+
+    <header>
+        <div class="logo"> <!-- НОВОЕ: Контейнер для логотипа -->
+            <a href="index.html"><img src="logo.png" alt="Логотип Книжного Мира"></a> <!-- НОВОЕ: Картинка логотипа -->
+      </div>
+          <div class="container">
+           
+              <h1>КНИГА В МЕШКЕ</h1>
+              <nav>
+                  <ul>
+                      <li class="dropdown">
+                          <a href="#" class="dropbtn">Каталог</a>
+                          <div class="dropdown-content">
+                              <a href="Манга.html">Манга</a>
+                              <a href="Фэнтези.html">Фэнтези</a>
+                              <a href="ЛюбовныеРоманы.html">Любовные романы</a>
+                              <a href="Классика.html">Классика</a>
+                              <a href="Детективы.html">Детективы</a>
+                          </div>
+                      </li>
+                      <li><a href="ОНас.html">О нас</a></li>
+                      <li><a href="Контакты.html">Контакты</a></li>
+                      <li><a href="ЛичныйКабинет.html">Личный кабинет</a></li>
+                  </ul>
+              </nav>
+          </div>
+      </header>
+
+      <main>
+        <div class="white-container">
+            <div class="cont">
+                <div class="avatar" id="user-avatar">
+                    A
+                </div>
+                <h1 class="account-name" id="user-name">Имя пользователя</h1>
+                <p class="account-info" id="user-email"></p>
+                <p class="account-info" id="user-phone"></p>
+    
+                <div class="account-links" id="auth-dependant">
+                    <a href="favorites.html" class="account-link favorite">Избранное</a>
+                    <a href="a.html" class="account-link cart">Корзина</a>
+                    <button id="auth-button" class="account-link" onclick="toggleAuth()">Войти/Регистрация</button>
+                </div>
+    
+            </div>
+
+        </div>
+    </main>
+
+
+
+    <footer>
+        <div class="pod">
+            <p>&copy; 2023 Книжный Мир. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>

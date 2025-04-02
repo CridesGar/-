@@ -1,0 +1,104 @@
+body {
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main.book-single-page {
+    flex-grow: 1;
+    padding: 50px 0;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+}
+
+.book-single-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+    flex-direction: row;
+}
+
+.book-single-cover {
+    width: 30%;
+    margin-right: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.book-single-cover-image {
+    width: 100%;
+    display: block;
+    height: auto;
+    border-radius: 5px;
+}
+
+.book-single-details {
+    width: 70%;
+    box-sizing: border-box;
+}
+
+.book-single-title {
+    font-size: 2.5em;
+    margin-bottom: 0.2em;
+    color: #5e3d38;
+    font-weight: normal;
+}
+
+.book-single-author {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: #5e3d38;
+}
+
+.book-single-description {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+.book-single-price {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+}
+
+.book-single-actions {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.book-single-actions button {
+    background-color: #a17a74;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+.book-single-actions button:hover {
+    background-color: #5e3d38;
+}
+
+.book-single-actions button svg {
+    fill: currentColor;
+}
+
+.book-single-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,159 @@
+/* style.css */
+
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    font-family: Century Gothic, serif;
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/* Новинки */
+.new-arrivals {
+    padding: 50px 0;
+}
+
+.new-arrivals h3 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 35px;
+    margin-top: -15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.new-books {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.new-books-frame {
+    border: 2px solid #745b5b; /* Цвет и толщина общей рамки */
+    padding: 20px;           /* Отступ внутри рамки */
+    border-radius: 10px;      /* Скругление углов */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.book {
+    width: 300px;
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 30px;
+    margin-right: 5px;
+    margin-left: 10px;
+
+}
+
+.book-frame {
+    border: 1px solid transparent; /* Прозрачная рамка по умолчанию */
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 15px; /* Отступ между рамкой и текстом */
+}
+
+.book-frame img {
+    width: 100%;
+    border-radius: 5px;
+    height: 350px;          /* Фиксированная высота */
+    object-fit: cover;      /* Обрезать изображения, чтобы соответствовать размеру */
+}
+
+
+.book h4 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.book p {
+    font-size: 16px;
+    color: #777;
+}
+
+
+
+/* Популярные */
+.popular {
+    padding: 50px 0;
+    margin-top: 20px;
+}
+
+.popular h3 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.popular-books {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* style.css */
+
+/* ... (другие стили) ... */
+
+.book {
+    width: 300px;
+    margin-bottom: 30px;
+    text-align: center;
+    border: 1px solid transparent; /* Прозрачная граница по умолчанию */
+    padding: 10px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Плавный переход для transform, box-shadow и border-color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень по умолчанию */
+    border-radius: 5px; /* Скругление углов */
+}
+
+.book:hover {
+    transform: scale(1.03); /* Увеличиваем масштаб на 3% */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Усиливаем тень */
+    border-color: #ccc; /* Цвет рамки при наведении */
+}
+
+/* ... (другие стили) ... */
+
+.book:hover {
+    transform: scale(1.03); /* Увеличиваем масштаб на 3% */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Усиливаем тень */
+    border-color: #ccc; /* Цвет рамки при наведении */
+}
+
+.book img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 430px;
+    object-fit: cover;
+}
+
+
+
+.book h4 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.book p {
+    font-size: 16px;
+    color: #777;
+}
+

@@ -1,0 +1,188 @@
+/* Общие стили */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+main {
+    padding: 20px;
+}
+
+header {
+
+    margin-bottom: 6%;
+}
+
+footer {
+    position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+
+
+
+/* Стили страницы товара */
+.book-single-page {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.book-single-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 90%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.book-single-cover-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Стили страницы корзины */
+.cart-page {
+    max-width: 900px; /* Увеличил ширину страницы корзины */
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Добавляем стили для контейнера корзины */
+.cart-container {
+    display: flex;
+    justify-content: space-between; /* Размещаем товары и итоговую сумму по краям */
+}
+
+/* Добавляем стили для списка товаров */
+#cart-items {
+    width: 70%; /* Занимает большую часть пространства */
+}
+
+/* Добавляем стили для каждой карточки товара */
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    background-color: #f9f9f9; /* Добавляем фон для карточки */
+    border-radius: 5px; /* Скругляем углы карточки */
+    padding: 10px; /* Добавляем отступы внутри карточки */
+}
+
+.cart-item img {
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.cart-item-details h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.cart-item-details p {
+    margin-bottom: 0;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Добавляем стили для элементов управления количеством */
+.cart-item-details p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.quantity-btn {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.quantity-btn:hover {
+    background-color: #ccc;
+}
+
+.remove-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 0.5em;
+    font-family: Century Gothic, serif;
+
+}
+
+.remove-btn:hover {
+    background-color: #d32f2f;
+    font-family: Century Gothic, serif;
+
+}
+
+/* Добавляем стили для блока с итоговой суммой */
+.cart-summary {
+    width: 25%; /* Занимает меньшую часть пространства */
+    padding: 20px;
+    background-color: #eee; /* Выделяем блок цветом */
+    border-radius: 5px;
+    text-align: center; /* Выравниваем текст по центру */
+}
+
+.cart-summary h3 {
+    margin-top: 0;
+}
+
+#checkout-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: Century Gothic, serif;
+
+    border-radius: 5px;
+}
+
+#checkout-btn:hover {
+    background-color: #3e8e41;
+}
+
+#clear-cart {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+    margin-top: 0.5em;
+    font-family: Century Gothic, serif;
+
+}
+
+#clear-cart:hover {
+    background-color: #ccc;
+}

@@ -1,0 +1,178 @@
+/* style.css */
+
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    font-family: Century Gothic, serif;
+    
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+header {
+    background-color: #834949;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    font-family: Century Gothic, serif;
+    height: 50px;
+    position: relative;
+    margin-bottom: 2%;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 120px;
+    margin-top: 10px;
+}
+
+header h1 {
+    font-weight: bold;
+    margin: 0;
+    margin-left: -150px;
+    font-size: 30px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+header nav ul {
+    font-size: 20px;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    color: #ffffff;
+}
+
+header nav li {
+    margin-left: 20px;
+    color: #ffffff;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #ffffff;
+}
+
+.logo {  /* НОВОЕ: Стили для контейнера логотипа */
+    position: absolute; /* Вынимаем из потока документа */
+    top: 0px;         /* Расстояние от верхнего края шапки */
+    left: 100px;        /* Расстояние от левого края шапки */
+    width: 90px; 
+    height: auto;
+}
+
+.logo img { /* НОВОЕ: Стили для картинки логотипа */
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Выпадающий список "Каталог" */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none; /* Изначально скрываем */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    padding: 5px 0;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #834949;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Показываем при наведении */
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+
+
+/* Подвал */
+
+  
+  footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 14px;
+  }
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav {
+        margin-top: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav li {
+        margin: 5px 0;
+    }
+
+    .new-arrivals, .popular {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book {
+        width: 80%;
+    }
+}
+
+.oi {
+    width: 30%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    font-family: Century Gothic, serif;
+
+}

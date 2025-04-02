@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Книжный Магазин (Минимализм)</title>
+  <link rel="stylesheet" href="susss.css">
+  <link rel="stylesheet" href="нигга.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo"> <!-- НОВОЕ: Контейнер для логотипа -->
+            <a href="index.html"><img src="logo.png" alt="Логотип Книжного Мира"></a> <!-- НОВОЕ: Картинка логотипа -->
+      </div>
+          <div class="container">
+           
+              <h1>КНИГА В МЕШКЕ</h1>
+              <nav>
+                  <ul>
+                      <li class="dropdown">
+                          <a href="#" class="dropbtn">Каталог</a>
+                          <div class="dropdown-content">
+                              <a href="Манга.html">Манга</a>
+                              <a href="Фэнтези.html">Фэнтези</a>
+                              <a href="ЛюбовныеРоманы.html">Любовные романы</a>
+                              <a href="Классика.html">Классика</a>
+                              <a href="Детективы.html">Детективы</a>
+                          </div>
+                      </li>
+                      <li><a href="ОНас.html">О нас</a></li>
+                      <li><a href="Контакты.html">Контакты</a></li>
+                      <li><a href="ЛичныйКабинет.html">Личный кабинет</a></li>
+                  </ul>
+              </nav>
+          </div>
+      </header>  
+  
+  
+  <div class="all">
+    <h3>Оформление заказа</h3>
+    <form id="order-form">
+
+        <div class="form-group">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" placeholder="Ваше имя" required maxlength="25" required minlength="3">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Ваш email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Телефон:</label>
+            <input class="oi" type="tel" id="phone" name="phone" placeholder="+7-123-456-78-90" pattern="\+7\d{3}\d{3}\d{2}\d{2}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Адрес доставки:</label>
+            <input type="text" id="address" name="address" placeholder="Улица, дом, квартира" required maxlength="70" required minlength="5">
+        </div>
+
+        <div class="form-group">
+            <label for="city">Город:</label>
+            <input type="text" id="city" name="city" placeholder="Город" required maxlength="40" required minlength="3">
+        </div>
+
+        <div class="form-group">
+            <label for="zip">Почтовый индекс:</label>
+            <input type="text" id="zip" name="zip" placeholder="Индекс" pattern="\d{6}" required>
+        </div>
+
+        <div class="form-group">
+            <label>Способ доставки:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="delivery" value="courier" required> Курьерская доставка</label>
+                <label><input type="radio" name="delivery" value="pickup" required> Самовывоз из пункта выдачи</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Способ оплаты:</label>
+            <select class="oi" name="payment">
+                <option value="card">Картой онлайн</option>
+                <option value="cash">Наличными при получении</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Комментарии к заказу:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Ваши пожелания"></textarea>
+        </div>
+
+        <button type="submit">Оформить заказ</button>
+    </form>
+</div>
+
+
+  <footer>
+      <div class="container">
+          <p>&copy; 2023 Книжный Мир. Все права защищены.</p>
+      </div>
+  </footer>
+
+
+</body>
+</html>

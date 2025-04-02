@@ -1,0 +1,132 @@
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    font-family: Century Gothic, serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Общие стили для элементов формы */
+.oi,
+input[type="text"],
+input[type="email"],
+input[type="tel"], /* Добавлено для номера телефона */
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cc8b87;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Увеличил отступ снизу */
+    font-family: Century Gothic, serif;
+}
+
+select {
+    appearance: none; /* Убирает стандартные стили селекта */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px top 50%;
+    background-size: 16px;
+    padding-right: 30px; /* Место для стрелки */
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #7d4f51;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.radio-group label {
+    display: inline-block; /* Размещает радиокнопки в строку */
+    margin-right: 15px; /* Отступ между радиокнопками */
+    font-weight: normal; /* Убирает жирный шрифт */
+}
+
+button {
+    background-color: #7d4f51;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-family: Century Gothic, serif;
+}
+
+button:hover {
+    background-color: #633b3d;
+}
+
+/* Стили для контейнера формы */
+.all {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Важно, чтобы padding не увеличивал ширину */
+}
+
+/* Дополнительный стиль для контейнера страницы */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Занимает всю высоту экрана */
+}
+
+main {
+  flex: 1; /* Занимает всё доступное пространство между шапкой и подвалом */
+  display: flex;
+  justify-content: center; /* Центрируем по горизонтали */
+  align-items: center; /* Центрируем по вертикали */
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* Стили для кнопки */
+.button {
+    background-color: #7d4f51;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Century Gothic, serif;
+    text-decoration: none; /* Убирает подчеркивание у ссылки */
+    display: inline-block; /* Позволяет задавать ширину и высоту */
+    width: auto; /* Автоматическая ширина по содержимому */
+    text-align: center; /* Центрирует текст */
+}
+
+.button:hover {
+    background-color: #633b3d;
+}

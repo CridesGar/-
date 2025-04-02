@@ -1,0 +1,82 @@
+input {
+    background-color: #c4deb2;
+    font-family: Century Gothic, serif;
+
+}
+textarea {
+    background-color: #c4deb2;
+    font-family: Century Gothic, serif;
+
+}
+select {
+    background-color: #c4deb2;
+    font-family: Century Gothic, serif;
+
+}
+.knopka {
+    background: linear-gradient(rgb(52, 120, 79), rgb(187, 208, 84)) ;
+    font-family: Century Gothic, serif;
+
+}
+.all {
+    border: 5px, solid #313a2b;
+    color: #5f4128;
+    padding: 20px;
+    width: 300px;
+    margin-left: 600px;
+    font-family: Century Gothic, serif;
+    background-color: rgba(240, 248, 255, 0.856);
+    justify-content: space-between; /* Равномерное распределение элементов по горизонтали */
+    align-items: center; /* Выравнивание элементов по вертикали */
+    margin: 0 auto; /* Центрирование контейнера */
+    margin-top: 25px;
+
+}
+h1 {
+    text-align: center;
+    color: rgb(45, 114, 49);
+}
+body {
+    background: #ededed;
+}
+.header {
+      background-color: #333; /* Темно-серый фон */
+      color: white; /* Белый текст */
+      padding: 20px 0; /* Отступы сверху и снизу */
+      font-family: Century Gothic, serif;
+
+    }
+
+.header-container {
+      width: 90%; /* Ширина контейнера шапки */
+      margin: 0 auto; /* Центрирование контейнера */
+      display: flex; /* Использование flexbox для расположения элементов */
+      justify-content: space-between; /* Равномерное распределение элементов по горизонтали */
+      align-items: center; /* Выравнивание элементов по вертикали */
+    }
+
+.logo {
+      font-size: 24px; /* Размер шрифта логотипа */
+      font-family: Century Gothic, serif;
+
+    }
+
+.navigation ul {
+      list-style: none; /* Убираем маркеры списка */
+      margin: 0;
+      padding: 0;
+      display: flex; /* Размещаем элементы списка в ряд */
+    }
+
+.navigation li {
+      margin-left: 20px; /* Отступ между элементами списка */
+    }
+
+.navigation a {
+      color: white; /* Белый цвет ссылок */
+      text-decoration: none; /* Убираем подчеркивание ссылок */
+    }
+
+.navigation a:hover {
+      text-decoration: underline; /* Подчеркивание при наведении */
+    }

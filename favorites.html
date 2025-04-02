@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Избранное</title>
+    <link rel="stylesheet" href="Избранное.css">
+    <link rel="stylesheet" href="нигга.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo"> <!-- НОВОЕ: Контейнер для логотипа -->
+            <a href="index.html"><img src="logo.png" alt="Логотип Книжного Мира"></a> <!-- НОВОЕ: Картинка логотипа -->
+      </div>
+          <div class="container">
+           
+              <h1>КНИГА В МЕШКЕ</h1>
+              <nav>
+                  <ul>
+                      <li class="dropdown">
+                          <a href="#" class="dropbtn">Каталог</a>
+                          <div class="dropdown-content">
+                              <a href="Манга.html">Манга</a>
+                              <a href="Фэнтези.html">Фэнтези</a>
+                              <a href="ЛюбовныеРоманы.html">Любовные романы</a>
+                              <a href="Классика.html">Классика</a>
+                              <a href="Детективы.html">Детективы</a>
+                          </div>
+                      </li>
+                      <li><a href="ОНас.html">О нас</a></li>
+                      <li><a href="Контакты.html">Контакты</a></li>
+                      <li><a href="ЛичныйКабинет.html">Личный кабинет</a></li>
+                  </ul>
+              </nav>
+          </div>
+      </header>
+
+
+      <h1>Избранное</h1>
+
+  <div id="favorites-list">
+    <!-- Здесь будет отображаться список избранных товаров -->
+  </div>
+
+  <script>
+     document.addEventListener('DOMContentLoaded', function() {
+    const favoritesList = document.getElementById('favorites-list');
+
+    // Получаем список избранного из localStorage
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    // Фильтруем список избранного, чтобы удалить элементы без id, name, price
+    favorites = favorites.filter(item => item && item.id && item.name && item.price);
+
+    // Сохраняем отфильтрованный список в localStorage
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+
+    // Функция для отображения списка избранного
+    function displayFavorites() {
+        // Получаем список избранного из localStorage (каждый раз!)
+        let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+        favoritesList.innerHTML = ''; // Очищаем список
+        console.log('displayFavorites: Текущий список favorites:', favorites); // Лог
+
+        if (favorites.length === 0) {
+            favoritesList.innerHTML = '<p class="empty-message">Ваш список избранного пуст.</p>';
+            return;
+        }
+
+        const ul = document.createElement('ul');
+        favorites.forEach(item => {
+            const li = document.createElement('li');
+
+            const span = document.createElement('span');
+            span.textContent = `${item.name} - ${item.price} руб.`;
+            li.appendChild(span);
+
+            const removeButton = document.createElement('button');
+            removeButton.classList.add('remove-from-favorites');
+            removeButton.dataset.productId = String(item.id); // Преобразуем item.id в строку
+            removeButton.textContent = 'Удалить';
+            removeButton.addEventListener('click', function(event) {
+                event.preventDefault(); // Предотвращаем перезагрузку страницы
+                const productId = this.dataset.productId; // Получаем productId из dataset
+                console.log('Нажата кнопка "Удалить" для productId:', productId); // Лог
+                removeFromFavorites(productId);
+            });
+
+            li.appendChild(removeButton);
+
+            ul.appendChild(li);
+        });
+        favoritesList.appendChild(ul);
+    }
+
+    // Функция для удаления товара из избранного
+    function removeFromFavorites(productId) {
+        console.log('removeFromFavorites: productId для удаления:', productId); // Лог
+        let favorites = JSON.parse(localStorage.getItem('favorites')) || []; // Получаем актуальный список
+        console.log('removeFromFavorites: Список favorites перед фильтрацией:', favorites); // Лог
+        favorites = favorites.filter(item => String(item.id) !== productId); // Преобразуем item.id в строку при фильтрации
+        console.log('removeFromFavorites: Список favorites после фильтрации:', favorites); // Лог
+        localStorage.setItem('favorites', JSON.stringify(favorites)); // Сохраняем
+        console.log('removeFromFavorites: Список favorites сохранен в localStorage:', localStorage.getItem('favorites')); // Лог
+        displayFavorites(); // Обновляем отображение списка
+    }
+
+    // Отображаем список избранного при загрузке страницы
+    displayFavorites();
+});
+  </script>
+
+
+
+
+<footer>
+    <div class="pod">
+        <p>&copy; 2023 Книжный Мир. Все права защищены.</p>
+    </div>
+</footer>
+
+</body>
+</html>
